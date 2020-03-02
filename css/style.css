@@ -51,3 +51,7 @@
 .bullet-slide i {
     cursor: pointer;
 }
+
+.bullet-slide i.active {
+    color: white;
+}
