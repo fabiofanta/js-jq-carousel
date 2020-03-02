@@ -1,12 +1,16 @@
 $(document).ready(function () {
     $(".right").click(nextSlide);
     $(".left").click(lastSlide);
+    // var bulletActiveNext = $(".bullet-slide i.active").next();
+    // var bulletActivePrev = $(".bullet-slide i.active").prev();
+    // bulletActiveNext.click(nextSlide);
+    // bulletActivePrev.click(lastSlide);
 
-    var clock = setInterval(nextSlide,1000);
-
-    setTimeout(function () {
-        clearInterval(clock);
-    },7000)
+    // var clock = setInterval(nextSlide,1000);
+    //
+    // setTimeout(function () {
+    //     clearInterval(clock);
+    // },7000)
 
 
 

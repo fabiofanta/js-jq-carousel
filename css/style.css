@@ -45,7 +45,7 @@
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
-    color: lightgrey;
+    color: grey;
 }
 
 .bullet-slide i {
