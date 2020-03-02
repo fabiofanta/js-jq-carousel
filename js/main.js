@@ -2,6 +2,12 @@ $(document).ready(function () {
     $(".right").click(nextSlide);
     $(".left").click(lastSlide);
 
+    var clock = setInterval(nextSlide,1000);
+
+    setTimeout(function () {
+        clearInterval(clock);
+    },7000)
+
 
 
     function nextSlide () {
