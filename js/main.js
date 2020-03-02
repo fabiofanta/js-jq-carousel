@@ -1,10 +1,15 @@
 $(document).ready(function () {
     $(".right").click(nextSlide);
     $(".left").click(lastSlide);
-    // var bulletActiveNext = $(".bullet-slide i.active").next();
-    // var bulletActivePrev = $(".bullet-slide i.active").prev();
-    // bulletActiveNext.click(nextSlide);
-    // bulletActivePrev.click(lastSlide);
+    $(".bullet-slide i").click(function () {
+        $(".bullet-slide i").removeClass("active");
+        $(this).addClass("active");
+        // $(".slideshow").children().addClass("active");
+
+        console.log(find(this));
+
+    });
+
 
     // var clock = setInterval(nextSlide,1000);
     //
