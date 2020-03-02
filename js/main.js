@@ -1,18 +1,23 @@
 $(document).ready(function () {
+
     $(".right").click(nextSlide);
     $(".left").click(lastSlide);
-    $(".bullet-slide i").click(function () {
-        $(".bullet-slide i").removeClass("active");
-        $(this).addClass("active");
-        // $(".slideshow").children().addClass("active");
-
-        console.log(find(this));
-
-    });
-
-
-    // var clock = setInterval(nextSlide,1000);
+    // $(".bullet-slide i").click(function () {
+    //     // var test = $(".bullet-slide i").index(this);
     //
+    //     $(".bullet-slide i").removeClass("active");
+    //     $(this).addClass("active");
+    //     $(".slideshow").addClass("active");
+    //
+    // });
+
+
+    var clock = setInterval(nextSlide,1000);
+    //
+    $(".slideshow").mouseenter(function () {
+        clearInterval(clock)
+    })
+
     // setTimeout(function () {
     //     clearInterval(clock);
     // },7000)
