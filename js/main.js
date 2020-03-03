@@ -2,16 +2,34 @@ $(document).ready(function () {
 
     $(".right").click(nextSlide);
     $(".left").click(lastSlide);
-    // $(".bullet-slide i").click(function () {
-    //     // var test = $(".bullet-slide i").index(this);
-    //
-    //     $(".bullet-slide i").removeClass("active");
-    //     $(this).addClass("active");
-    //     $(".slideshow").addClass("active");
-    //
-    // });
 
+    // bonus
+    $(".bullet-slide i").click(function () {
+        var test = $(".bullet-slide i").index(this);
+        $(".bullet-slide i").removeClass("active");
+        $(this).addClass("active");
+        $(".slideshow img.active").removeClass("active");
+        $(".slideshow img").eq(test).addClass("active");
 
+    });
+
+    //gestione tastiera
+
+    $(document).keydown(function(event) {
+        switch (event.key) {
+            case "ArrowLeft":
+                lastSlide();
+                break;
+            case "ArrowRight":
+                nextSlide();
+                break;
+            default:
+                console.log("tasto errato");
+                break;
+        }
+    });
+
+    // time
     var clock = setInterval(nextSlide,1000);
     //
     $(".slideshow").mouseenter(function () {
