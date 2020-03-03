@@ -18,6 +18,11 @@ $(document).ready(function () {
         clearInterval(clock)
     })
 
+    $(".slideshow").mouseleave(function () {
+        clearInterval(clock);
+        clock = setInterval(nextSlide,1000);
+    })
+
     // setTimeout(function () {
     //     clearInterval(clock);
     // },7000)
